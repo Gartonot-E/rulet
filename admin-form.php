@@ -1,6 +1,8 @@
 <?php 
+
 	$adminlogin = 'admin';
 	$adminpassword = 'admin';
+
 
 	if(isset($_POST['done'])){
 		if(trim($_POST['login']) == $adminlogin && trim($_POST['password']) == $adminpassword){
@@ -24,7 +26,10 @@
 </head>
 <body class="bg-dark">
 	
+
 <div class="container bg-light rounded w-75">
+
+
 
 	<form method="POST" class="mt-5 text-center p-5">
 		<h3 class="text-center">Войти</h3>
