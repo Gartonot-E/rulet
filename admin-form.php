@@ -1,18 +1,15 @@
 <?php 
+$adminlogin = 'admin';
+$adminpassword = 'admin';
 
-	$adminlogin = 'admin';
-	$adminpassword = 'admin';
 
-
-	if(isset($_POST['done'])){
-		if(trim($_POST['login']) == $adminlogin && trim($_POST['password']) == $adminpassword){
-			header('Location: admin.php');
-		} else {
-			$error = "Не верные данные";
-		}
+if(isset($_POST['done'])){
+	if(trim($_POST['login']) == $adminlogin && trim($_POST['password']) == $adminpassword){
+		header('Location: admin.php');
+	} else {
+		$error = "Не верные данные";
 	}
-
-
+}
 ?>
 
 <!DOCTYPE html>
