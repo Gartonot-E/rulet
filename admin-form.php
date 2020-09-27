@@ -1,20 +1,17 @@
 <?php 
 
-	$adminlogin = 'admin';
-	$adminpassword = 'admin';
+$adminlogin = 'admin';
+$adminpassword = 'admin';
 
-
-	if(isset($_POST['done'])){
-		if(trim($_POST['login']) == $adminlogin && trim($_POST['password']) == $adminpassword){
-			header('Location: admin.php');
-		} else {
-			$error = "Не верные данные";
-		}
+if(isset($_POST['done'])){
+	if(trim($_POST['login']) == $adminlogin && trim($_POST['password']) == $adminpassword){
+		header('Location: admin.php');
+	} else {
+		$error = "Не верные данные";
 	}
-
+}
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +22,8 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-dark">
-	
 
 <div class="container bg-light rounded w-75">
-
-
-
 	<form method="POST" class="mt-5 text-center p-5">
 		<h3 class="text-center">Войти</h3>
 		<br>
@@ -46,7 +39,6 @@
 		</label>
 		<br>
 		<input type="submit" value="Войти" name="done" class="mt-3 btn btn-info">
-		
 	</form>
 </div>
 </body>
