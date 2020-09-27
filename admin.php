@@ -73,7 +73,6 @@
 			$chanceARR[] = $row['chace'];
 		}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,11 +161,6 @@
 	  			echo "<th>".$idGameARR[$i]."</th>";
 	  			echo "<th>".$countARR[$i]."</th>";
 	  			echo "<th>".$chanceARR[$i]."</th>";
-	  			// echo "<th><form method='POST'>
-	  			// <input type='submit' class='btn btn-danger' name='delete' value='Удалить'>
-	  			// <input type='text' style='visibility: hidden;' name='img_src_table' value='".$img_srcARR[$i]."'>
-	  			// 		  </form>
-	  			// 	  </th>";
 	  			echo "</tr>";
 	  		}
 	  	?>
@@ -180,5 +174,3 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
