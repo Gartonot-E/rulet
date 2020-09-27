@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.role{
+	border: 2px solid #333;
+	box-sizing: border-box;
+	width: 240px;
+	margin: 0 auto;
+	height: 84px;
+	overflow: hidden;
+}
+.line{
+	display: flex;
+	transition: 5s;
+	position: relative;
+}
+ul > li{
+	height: 80px;
+	list-style: none;	
+}
+img{ width: 80px; }
+.line-red{
+	height: 80px;
+	width: 3px;
+	background: red;
+	margin-left: 120px;
+	position: absolute;
+}
+
+.modal-dialog {
+    min-width: 200px !important;
+    max-width: 300px !important;
+}
+
+.card{ 
+	margin: 0 auto;
+ }
+
+ .card > img{
+ 	width: 150px;
+ 	margin-left: 60px;
+ }
+
+form.addItem{
+	display: flex;
+	justify-content: space-around;
+}
+table img{
+	width: 30px;
+}
+form.deleteItem{
+	display: flex;
+	justify-content: space-around;
+}
+.form-control{
+	margin-right: 10px;
+}
+
+form.mt-5{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-dialog{
+	margin: 10% auto;
+}
