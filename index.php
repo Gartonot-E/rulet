@@ -1,4 +1,3 @@
-
 <?php
 	$mysqli = new mysqli('localhost', 'id8603457_gap', 'm24031980', 'id8603457_gap');
 	
@@ -18,33 +17,24 @@
 			$chanceARR[] = $row['chace'];
 		}
 
-
-	$chanceArr = [999, 950, 888, 777, 666, 555, 96, 50];
-	$arrArr = ['Броня', 'ШАУРМА','Глина', 'Алмаз', 'Опыт', 'Яблоко', 'ШАУРМА!!', 'Око'];
-	$nameItemArr = ['armor', 'shava', 'clay', 'diamond', 'exp', 'gold_apple', 'helmet', 'oko'];
-
-
 	$arr = json_encode($img_nameARR);
 	$nameItem = json_encode($img_srcARR);
 	$chance = json_encode($chanceARR);
-
-	
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>RULET</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 </head>
-<div class="container">
 <body class="bg-dark">
+<div class="container">
 	<div class="jumbotron mt-5">
 		<h1>Рулетка</h1>
 		<p><a href="admin-form.php">Admin-Panel</a></p>
 	</div>
-
 
 <div class="card mb-5" style="width: 18rem;">
   <img src="image/s600.png" class="mt-5" >
@@ -58,29 +48,28 @@
 </div>
 
 
-		<!-- Modal -->
-		<div class="modal fade" id="twist" tabindex="-1" aria-labelledby="modalM" >
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="modalM">Кейс</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <div class="modal-body">
-		        <div class="role">
-					<div class="line-red"></div>
-					<ul class="line" style="left: 0"></ul>
-				</div>
-		      </div>
-		    </div>
-		  </div>
+<!-- Modal -->
+<div class="modal fade" id="twist" tabindex="-1" aria-labelledby="modalM" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	<h5 class="modal-title" id="modalM">Кейс</h5>
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	  <span aria-hidden="true">&times;</span>
+	</button>
+      </div>
+      <div class="modal-body">
+	<div class="role">
+			<div class="line-red"></div>
+			<ul class="line" style="left: 0"></ul>
 		</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 <script>
-
 	// Прокручиваем рулетку
 	let line = document.querySelector('.line');
 	let posL = 0;
@@ -107,8 +96,7 @@
 	let name = [];
 	let srcimg = [];
 
-	
-
+	// Выводим в ленту элементы и задаём им рандомную картинку 	
 	for (i = 0; i < 40; i++) {
 		r = Math.floor(Math.random() * (nameItem.length - 1)+1);
 		line.innerHTML += "<li><img src='image/"+nameItem[r]+".png'></li>";
