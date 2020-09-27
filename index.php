@@ -38,12 +38,13 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-dark">
 <div class="container">
+<body class="bg-dark">
 	<div class="jumbotron mt-5">
 		<h1>Рулетка</h1>
 		<p><a href="admin-form.php">Admin-Panel</a></p>
 	</div>
+
 
 <div class="card mb-5" style="width: 18rem;">
   <img src="image/s600.png" class="mt-5" >
@@ -56,25 +57,27 @@
   </div>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="twist" tabindex="-1" aria-labelledby="modalM" >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalM">Кейс</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="role">
-			<div class="line-red"></div>
-			<ul class="line" style="left: 0"></ul>
+
+		<!-- Modal -->
+		<div class="modal fade" id="twist" tabindex="-1" aria-labelledby="modalM" >
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="modalM">Кейс</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <div class="role">
+					<div class="line-red"></div>
+					<ul class="line" style="left: 0"></ul>
+				</div>
+		      </div>
+		    </div>
+		  </div>
 		</div>
-      </div>
-    </div>
-  </div>
-</div>
+
 </div>
 <script>
 
@@ -105,7 +108,7 @@
 	let srcimg = [];
 
 	
-	// Выводим рандомные картинки в рулетку
+
 	for (i = 0; i < 40; i++) {
 		r = Math.floor(Math.random() * (nameItem.length - 1)+1);
 		line.innerHTML += "<li><img src='image/"+nameItem[r]+".png'></li>";
@@ -113,18 +116,20 @@
 
 	//  Скрипт, который подсичтывает с какой вероятностью выпадет предмет и его изображение
 	for (i = 0; i < arr.length; i++) {
+	
 		if(randomD < chance[i]){
 			name = arr[i];
 			srcimg = nameItem[i];
 		} 
 	}
-
 	// Выбираем все изображения из рулетки, чтоб изменить изображение на выпадаемый элемент
 	let lineEl = document.querySelectorAll('.line>li>img');
 	
 	// Прописываем выйграшное изображение
 	lineEl[((line.childNodes.length-1))-1].src = "image/"+srcimg+".png";
+
 </script>
+
 <!-- JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
